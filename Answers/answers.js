@@ -77,7 +77,7 @@ function getAllArticles() {
     console.log(articles);
 }
 // getAllArticles()
-// https://github.com/Kuldik/test_task_vue/blob/main/screenshots/Screenshot%202024-08-05%20215335.png
+// https://github.com/Kuldik/test_task_vue/blob/8bad25ea3d006bcde4fad885687a88e03c2ca884/Answers/screenshots/Screenshot%202024-08-05%20215335.png
 
 // ---------------------------------------------------------------------------------
 
@@ -97,4 +97,4 @@ function getAllParameters() {
     console.log(productParameters);
 }
 // getAllParameters();
-// https://github.com/Kuldik/test_task_vue/blob/main/screenshots/Screenshot%202024-08-05%20220509.png
+// https://github.com/Kuldik/test_task_vue/blob/8bad25ea3d006bcde4fad885687a88e03c2ca884/Answers/screenshots/Screenshot%202024-08-05%20220509.png
