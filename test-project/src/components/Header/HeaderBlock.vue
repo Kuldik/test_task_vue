@@ -138,9 +138,10 @@ export default {
     color: $color-font-main;
     transition: color 0.2s;
     text-align: center;
-
+    transition: all 0.3s;
     &:hover {
       color: $color-font-hover;
+      font-size: 16px;
     }
 
     @include _1200 {

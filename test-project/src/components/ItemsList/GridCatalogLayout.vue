@@ -27,6 +27,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px 24px;
+  margin-top: 10px;
 
   @include _1200 {
     grid-template-columns: repeat(3, 1fr);

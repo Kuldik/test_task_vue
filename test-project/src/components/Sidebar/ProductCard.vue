@@ -47,7 +47,7 @@ export default {
   border-radius: 4px;
   cursor: pointer;
   overflow: hidden;
-  min-height: 380px;
+  min-height: 358px;
   position: relative;
 
   &__header {
@@ -86,7 +86,7 @@ export default {
     padding: 8px;
   }
   &__title {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     text-decoration: none;
     color: $color-font-main;
     transition: color 0.2s;
@@ -106,8 +106,8 @@ export default {
     padding: 6px 10px;
     font-weight: bold;
     position: absolute;
-    left: 12px;
-    bottom: 12px;
+    left: 10px;
+    bottom: 8px;
     border-radius: 4px;
   }
 
