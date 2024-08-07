@@ -80,7 +80,7 @@ export default {
   border-radius: 4px;
   cursor: pointer;
   overflow: hidden;
-  min-height: 358px;
+  min-height: 380px;
   position: relative;
 
   &__header {
