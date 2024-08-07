@@ -23,17 +23,50 @@
     <div
       class="card__button"
       :class="{ 'card__button--available': product.available }"
+      @click="showModal = !showModal"
     >
       {{ buttonText }}
     </div>
+    <ModalPopup
+      v-if="!product.available && showModal"
+      @close="showModal = false"
+      class="modal"
+    >
+      <template v-slot:header>
+        <div>
+          <h2 class="modal__title">Сообщите о поступлении</h2>
+        </div>
+      </template>
+      <template v-slot:body>
+        <!-- prettier-ignore -->
+        <p class="modal__text">Введите ваш email, чтобы получать уведомления о поступлении товара.</p>
+        <div class="modal__form">
+          <input class="modal__input" type="email" placeholder="Ваш email" />
+          <div class="modal__button-box">
+            <button class="modal__button" @click="showModal = false">
+              Отправить
+            </button>
+            <button class="modal__button" @click="showModal = false">
+              Закрыть
+            </button>
+          </div>
+        </div>
+      </template>
+    </ModalPopup>
   </div>
 </template>
 
 <script>
+import ModalPopup from "./ModalPopup.vue";
+
 export default {
+  components: {
+    ModalPopup,
+  },
   data() {
     return {
       buttonText: this.product.available ? "Купить" : "Сообщить о поступлении",
+      showModal: false,
     };
   },
   props: {
@@ -159,6 +192,53 @@ export default {
     font-size: 12px;
     color: $color-font-second;
     text-decoration: line-through;
+  }
+}
+
+.modal {
+  &__title {
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  &__text {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  &__input {
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: 1px solid $color-border-active;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  &__button-box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  &__button {
+    border-radius: 4px;
+    border: 1px solid #7397f5;
+    color: #7397f5;
+    font-weight: bold;
+    padding: 12px 16px;
+    line-height: 100%;
+    transition: all 0.2s;
+    text-align: center;
+    bottom: 0;
+
+    &:hover {
+      color: $color-white;
+      background-color: #7397f5;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
   }
 }
 </style>
